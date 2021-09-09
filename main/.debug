@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionList>
-    <Extension Id="com.ev4-render.invisible">
+    <Extension Id="com.invisible">
         <HostList>
             <Host Name="AEFT" Port="9999" />
         </HostList>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.ev4-render.invisible" ExtensionBundleVersion="1.0" Version="6.0">
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.invisible" ExtensionBundleVersion="1.0" Version="6.0">
   <!-- MAJOR-VERSION-UPDATE-MARKER -->
   <ExtensionList>
-    <Extension Id="com.ev4-render.invisible" Version="6.1.0" />
+    <Extension Id="com.invisible" Version="6.1.0" />
   </ExtensionList>
   <ExecutionEnvironment>
     <HostList>
@@ -16,7 +16,7 @@
     </RequiredRuntimeList>
   </ExecutionEnvironment>
   <DispatchInfoList>
-    <Extension Id="com.ev4-render.invisible">
+    <Extension Id="com.invisible">
       <DispatchInfo>
         <Resources>
           <!-- <MainPath>./public/index.html</MainPath> -->
