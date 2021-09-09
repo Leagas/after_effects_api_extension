@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ev4</title>
+  <script src="../CSInterface.js"></script>
+  <script>
+    const csInterface = new CSInterface();
+
+    window.evalScriptTest = csInterface.evalScript;
+
+    window.addEventListener("message", (event) => {
+      csInterface.evalScript(event.data.script, (res) => {
+        const msg = {
+          pid: event.data.pid,
+          data: {
+            type: "evalscript",
+          }
+        }
+
+        if (res) {
+          msg.data.res = res
+        }
+
+        event.source.postMessage(msg, "*")
+      })
+    }, false);
+  </script>
+  <script>
+    window.require = require || cep_node.require;
+  </script>
+</head>
+
+<body style="margin: 0; border: 0; overflow:hidden;">
+  <iframe enable-nodejs src="http://localhost:9991/index-debug.html"
+    style="border: 0; width: 100vw; height: 100vh;"></iframe>
+</body>
+
+</html>

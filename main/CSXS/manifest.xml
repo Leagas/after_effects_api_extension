@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.ev4-render.invisible" ExtensionBundleVersion="1.0" Version="6.0">
+  <!-- MAJOR-VERSION-UPDATE-MARKER -->
+  <ExtensionList>
+    <Extension Id="com.ev4-render.invisible" Version="6.1.0" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="AEFT" Version="13.0" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="6.0" /> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.ev4-render.invisible">
+      <DispatchInfo>
+        <Resources>
+          <!-- <MainPath>./public/index.html</MainPath> -->
+          <MainPath>./public/develop/index-dev.html</MainPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>false</AutoVisible>
+          <StartOn>
+            <!-- PS dispatches this event on startup -->
+            <Event>applicationActivate</Event>
+            <!-- PPro dispatches this event on startup -->
+            <Event>com.adobe.csxs.events.ApplicationActivate</Event>
+          </StartOn>
+        </Lifecycle>
+        <UI>
+          <Type>Custom</Type>
+          <Geometry>
+            <Size>
+              <Height>100</Height>
+              <Width>100</Width>
+            </Size>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
